@@ -12,4 +12,5 @@ server.use(body_parser.json())
 
 server.post('/api', (req, res) => {
 	console.log(req.body.ip)
+	res.send("ok")
 });
