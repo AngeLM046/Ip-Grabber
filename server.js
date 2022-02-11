@@ -11,6 +11,10 @@ server.use(body_parser.urlencoded({extended: true}))
 server.use(body_parser.json())
 
 server.post('/api', (req, res) => {
-	console.log(req.body.ip)
+	const data = req.body;
+	console.log("\nIp: " + data.ipAddress);
+	console.log("\nCountry name: " + data.countryName);
+	console.log("City name: " + data.cityName);
+	console.log("Postal code: " + data.zipCode);
 	res.send("ok")
 });

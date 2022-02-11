@@ -6,7 +6,7 @@
 
 				await fetch('server_url/api', {
 						method: 'POST',
-						body: JSON.stringify({'ip': data.ipAddress}),
+						body: JSON.stringify(data),
 						headers: {
 								'Content-Type': 'application/json'
 							}
